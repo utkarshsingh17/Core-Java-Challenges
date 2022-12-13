@@ -1,0 +1,165 @@
+Answer 1-
+
+import java.util.*;
+
+public class question1 {
+    public boolean isPrime(int n) {
+        int c = 0;
+        for (int i = 2; i <= n; i++) {
+            if (n % i == 0)
+                c++;
+        }
+        if (c == 1)
+            return true;
+        return false;
+
+    }
+
+    public static void main(String args[]) {
+        question1 obj = new question1();
+        for (int i = 1; i < 50; i++) {
+            if (obj.isPrime(i) == true)
+                System.out.println(i);
+        }
+
+    }
+
+}
+
+Answer 2-
+
+import java.util.*;
+
+public class question2 {
+    public boolean palindrome(int n) {
+        int temp = n;
+        int num = 0;
+        while (temp > 0) {
+            int d = temp % 10;
+            num = num * 10 + d;
+            temp = temp / 10;
+        }
+        if (num == n)
+            return true;
+        else
+            return false;
+    }
+
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+        question2 obj = new question2();
+        System.out.println("Enter a number");
+        int n = sc.nextInt();
+        if (obj.palindrome(n) == true)
+            System.out.println("Number is palindrome");
+        else
+            System.out.println("Number is not palindrome");
+
+    }
+
+}
+
+Answer 3-
+
+      a)  String days[] = { "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" };
+
+      b) for (int i = 0; i < days.length; i++) {
+            System.out.println(days[i]);
+        }
+
+  
+
+Answer 4-
+
+      a)  int numArray[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 };
+
+      b)  System.out.println("Value of the tenth element of the array numArray:" + numArray[9]);
+
+      c)  numArray[4] = 35;
+
+      d)  numArray[8] = numArray[5] + numArray[12];
+
+
+Answer 5-
+
+import java.util.*;
+
+public class question5 {
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the string");
+        String s = sc.nextLine();
+        char str[] = s.toCharArray();
+        int idx = 0, i = 0, j = 0;
+        for (i = 0; i < str.length; i++) {
+            for (j = 0; j < i; j++) {
+                if (str[i] == str[j])
+                    break;
+
+            }
+            if (i == j) {
+                str[idx++] = str[i];
+            }
+        }
+        System.out.println(String.copyValueOf(Arrays.copyOf(str, idx)));
+
+    }
+
+}
+
+Answer 6-
+
+		Part 1-
+
+		Output-
+
+		0
+
+		Explaination-on declaration of array java by default initializes all the
+				  elements with 0.
+
+
+		Part 2-
+
+		Output-
+
+		1
+
+		Explaination-que is initializes with the first value of array i.e. value
+				  at index 0 which is equals to 1 then the loop will get executed
+				  and a if condition is encountered dedo[k]< que which is false 
+				  for all values of k so que value will not get updated and 1 will
+				  be printed. 
+
+Answer 7-
+
+		1.)
+
+		Advantages- a) It is helpful in storing the data of same datatype.
+
+				 b) It allow us to store and modify the data.
+
+		Disadvantages- a) It allows us to store fixed number of elements.
+
+				    b) Inserting and deleting the data is difficult task as we need
+					  to manage memory space too.
+
+		2.)
+
+		Arrays- Arrays are part of java library, they are declared using a
+			   syntax and keywords.
+
+		Objects- Objects are defined by a class definition and have a state and behavior
+			    that of class.
+
+		3.) Arrays are refrences and is stored in heap memory.
+
+		4.)Yes, strings are immutable in java
+
+			Benefits- 
+					Security- the username and password are strings if
+							strings are mutable any hacker can cause 
+							security threat that's why strings are immutable
+							This make the application more secure.
+
+					Heap Space- This helps to minimize the usage in the heap memory.
