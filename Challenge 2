@@ -1,0 +1,162 @@
+Answer 1-
+
+import java.util.*;
+
+public class question1 {
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Input the number");
+        int n = sc.nextInt();
+        int f = 1;
+        for (int i = 1; i <= n; i++) {
+            f = f * i;
+        }
+        System.out.println("Factorial:" + f);
+
+    }
+
+}
+Answer 2-
+
+import java.util.*;
+
+public class question3 {
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Input the 1st number:");
+        int a = sc.nextInt();
+        System.out.println("Input the 2nd number:");
+        int b = sc.nextInt();
+        System.out.println("Input the 3rd number:");
+        int c = sc.nextInt();
+        if (a > b && a > c)
+            System.out.println("The greatest:" + a);
+        else if (b > a && b > c)
+            System.out.println("The greatest:" + b);
+        else
+            System.out.println("The greatest:" + c);
+    }
+
+}
+
+
+
+
+Answer 3-
+
+import java.util.*;
+
+public class question2 {
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+        int r = sc.nextInt();
+        int c = 1;
+        for (int i = 0; i < r; i++) {
+            for (int j = 1; j <= c; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+            c = c + 2;
+        }
+        c = c - 1;
+        for (int i = 0; i < r - 1; i++) {
+            for (int j = 1; j < c - 2; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+            c = c - 2;
+        }
+
+    }
+
+Answer 4-
+
+import java.util.*;
+
+class question4 {
+    public static void main(String args[]) {
+
+        Scanner sc = new Scanner(System.in);
+        int c = 1;
+        while (true) {
+            System.out.println("Enter a guess between 1 and 100:");
+            int x = sc.nextInt();
+            if (x > 58)
+                System.out.println("Too high! Try Again");
+            else if (x < 58)
+                System.out.println("Too low! Try Again");
+            else {
+
+                System.out.println("Correct! You got it in " + c + " guesses!");
+                break;
+
+            }
+            c++;
+
+        }
+
+    }
+
+Answer 5-
+
+import java.util.*;
+
+public class question5 {
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+        char ch = 'y';
+        do {
+            System.out.println("Enter the first number:");
+            int n1 = sc.nextInt();
+            System.out.println("Enter the second number:");
+            int n2 = sc.nextInt();
+            System.out.println("Sum of numbers: " + (n1 + n2));
+            System.out.println("Do you want to continue y/n?");
+            ch = sc.next().charAt(0);
+
+        } while (ch == 'y');
+
+    }
+
+}
+
+Answer 6-
+
+Part 1-
+
+	Output- 
+	1
+	3
+	5
+	7
+	9
+
+	Explaination-for loop contains an if condition if(i%2==0) which gets true for
+			  i=0,i=2,i=4,i=6,i=8 if statement contains continue which means it
+			  skips the print statement for i=0,i=2,i=4,i=6,i=8 and passes the 
+			  control to the loop statement for i=1,i=3,i=5,i=7,i=9 for these if
+			  condition becomes false and tese values will get printed.
+
+
+Part 2- 
+
+	Output-
+	10
+
+	Explaination-for loop contains only continue statement so loop will get executed
+			  utill i<10 loop will be terminated when i becomes 10 and 10 will be
+			  printed.
+				 
+
+Answer 7-
+
+Part 1- cases after the case in which we forget to put a break statement will get
+	   executed untill a break or default case is not encountered.
+
+Part 2- 
+break- it is used to exit from the loop
+continue- it skip the execution of statements after continue and pass the control to the loop.
+			  
+	
+
+
