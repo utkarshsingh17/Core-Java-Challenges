@@ -1,0 +1,231 @@
+Answer 1-
+
+import java.util.*;
+
+class Triangle {
+    double area(int x, int y, int z) {
+        double s = (x + y + z) / 2.0;
+        double are = Math.sqrt(s * (s - x) * (s - y) * (s - z));
+        return are;
+    }
+
+    double perimeter(int x, int y, int z) {
+        return x + y + z;
+
+    }
+}
+
+public class question1 {
+
+    public static void main(String args[]) {
+        Triangle obj = new Triangle();
+        int a = 3, b = 4, c = 5;
+        System.out.println(obj.area(a, b, c));
+        System.out.println(obj.perimeter(a, b, c));
+
+    }
+
+}
+
+Answer 2-
+
+import java.util.*;
+
+class addDistance {
+    int feet, inches;
+
+    void distancefeet() {
+        Scanner sc = new Scanner(System.in);
+        feet = sc.nextInt();
+
+    }
+
+    void distanceinches() {
+        Scanner sc = new Scanner(System.in);
+        inches = sc.nextInt();
+    }
+
+    void add(addDistance d1, addDistance d2) {
+        int sumfeet = d1.feet + d2.feet;
+        int suminches = d1.inches + d2.inches;
+        System.out.println("Distance in feet:" + sumfeet);
+        System.out.println("Distance in inches:" + suminches);
+
+    }
+
+}
+
+public class question2 {
+
+    public static void main(String args[]) {
+        addDistance d1 = new addDistance();
+        addDistance d2 = new addDistance();
+        addDistance d3 = new addDistance();
+        System.out.println("Enter the distance1 in feet");
+        d1.distancefeet();
+        System.out.println("Enter the distance1 in inches ");
+        d1.distanceinches();
+        System.out.println("Enter the distance2 in feet");
+        d2.distancefeet();
+        System.out.println("Enter the distance2 in inches");
+        d2.distanceinches();
+        d3.add(d1, d2);
+
+    }
+
+}
+
+Answer 3-
+
+import java.util.*;
+
+class Employee {
+    private int id;
+    private String name;
+    private int age;
+    private String des;
+
+    public void setId(int n) {
+        this.id = n;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setName(String s) {
+        this.name = s;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setAge(int a) {
+        this.age = a;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setDes(String d) {
+        this.des = d;
+    }
+
+    public String getDes() {
+        return des;
+    }
+}
+
+public class question3 {
+    public static void main(String args[]) {
+        Employee obj = new Employee();
+        obj.setId(30478);
+        obj.setName("Utkarsh Singh Magarauthiya");
+        obj.setAge(19);
+        obj.setDes("Engineer");
+
+        System.out.println("ID:" + obj.getId());
+        System.out.println("Name:" + obj.getName());
+        System.out.println("Age:" + obj.getAge());
+        if (obj.getId() > 30000)
+            obj.setDes("Lead Engineer");
+        System.out.println("Designation:" + obj.getDes());
+
+    }
+
+}
+
+Answer 4-
+
+import java.util.*;
+
+class Rectangle {
+    private int length;
+    private int width;
+
+    Rectangle(int l, int w) {
+        this.length = l;
+        this.width = w;
+    }
+
+    public int getArea() {
+        return length * width;
+    }
+
+}
+
+class question4 {
+    public static void main(String args[]) {
+
+        Rectangle obj = new Rectangle(2, 3);
+        System.out.println("Area:" + obj.getArea());
+    }
+}
+
+Answer 5-
+
+	Part 1-
+			Output-
+				play-play-
+
+			Explaination-In main class we create object car of class Toy and
+					 then we call function play with the help of object car
+					"play-"will be printed then system.gc is encountered
+					which is a garbage collector and does not effect our output
+					the we create another object doll of class Toy and call function
+					play with the help of object doll and anothe "play-" will
+					be printed.
+
+			
+	Part 2-
+			Output-
+					Parent
+					Child
+					Child
+
+			Explaination- In main class we create an object x of class Parent
+					   then another object y of class child  with the help of
+					   inheritance and another object z of class Child then we pass
+					   the object x , y and z one by one to the method PrintMain
+					   x is the object of Parent class which prints "Parent"
+					   y and z are object of child class of parent class so 
+					   two times child will be printed;
+
+	Part 3-
+			Output-
+
+				play-play-
+
+			Explaination-In main class we create object car of class Toy and
+					 then we call function play with the help of object car
+					"play-"will be printed then system.gc is encountered
+					which is a garbage collector and does not effect our output
+					the we create another object doll of class Toy and call function
+					play with the help of object doll and anothe "play-" will
+					be printed.
+
+
+Answer 6-
+
+
+	1.)	Yes,because these two are two different concepts.Abstraction is a feature that
+		hides the unnecessary detail but shows the essential information while Encapulation
+		bind the code and data into a single unit to protect the data.
+
+	2.)	Abstraction- a) 	Abstraction is a feature of OOPs that hides the unnecessary
+				     detail but shows the essential information.
+
+				  b) 	In abstraction we use abstract classes and interfaces to
+				      hide the code complexities.
+
+		Encapsulation- a) Encapsulation is a feature of OOPs that bindes the code 
+					  and data into a single unit to protect the data.
+
+				    b) We use the getters and setters methods to hide the data.
+
+	3.) Encapsulation- The binding up of the data and methods into a single unit.
+
+	    Polymorphism-  It ability to exists in more then one form.Methods with same 
+				   name performs different actions based on parameters.
